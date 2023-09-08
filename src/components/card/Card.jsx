@@ -9,6 +9,7 @@ const Card = () => {
       <div className={styles.imgContainer}>
         <Image
           src='/p1.jpeg'
+          alt='card image'
           fill
           className={styles.image}
         />
