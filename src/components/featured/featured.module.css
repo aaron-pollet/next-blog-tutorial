@@ -8,7 +8,7 @@
 }
 
 .post {
-  margi-top: 60px;
+  margin-top: 60px;
   display: flex;
   align-items: center;
   gap: 50px;
@@ -26,6 +26,9 @@
 
 .textContainer {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .postTitle {
@@ -42,5 +45,38 @@
   padding: 16px 20px;
   border: none;
   border-radius: 5px;
-  width: maximum-content;
+  width: max-content;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: lightgray;
+}
+
+@media screen and (max-width: 1280px) {
+  .title {
+    font-size: 72px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 64px;
+  }
+
+  .imgContainer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 36px;
+  }
 }
