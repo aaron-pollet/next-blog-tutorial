@@ -11,7 +11,7 @@ const Comments = () => {
       {status === 'authenticated' ? (
         <div className={styles.write}>
           <textarea
-            placeholder='write a commen...'
+            placeholder='write a comment...'
             className={styles.input}
           />
           <button className={styles.button}>Send</button>

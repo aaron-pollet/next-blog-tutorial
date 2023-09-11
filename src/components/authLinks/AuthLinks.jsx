@@ -1,13 +1,14 @@
 'use client';
-import React, { useState } from 'react';
-import styles from './authLinks.module.css';
 import Link from 'next/link';
-import { useSession } from 'next-auth/react';
+import styles from './authLinks.module.css';
+import { useState } from 'react';
+import { signOut, useSession } from 'next-auth/react';
 
 const AuthLinks = () => {
   const [open, setOpen] = useState(false);
-  const { data: session } = useSession();
-  const status = 'unauthenticated';
+
+  const { status } = useSession();
+
   return (
     <>
       {status === 'unauthenticated' ? (
@@ -40,9 +41,9 @@ const AuthLinks = () => {
       {open && (
         <div className={styles.responsiveMenu}>
           <Link href='/'>Homepage</Link>
-          <Link href='/'>Contact</Link>
           <Link href='/'>About</Link>
-          {status === 'unauthenticated' ? (
+          <Link href='/'>Contact</Link>
+          {status === 'notauthenticated' ? (
             <Link href='/login'>Login</Link>
           ) : (
             <>
